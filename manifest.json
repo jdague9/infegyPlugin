@@ -13,9 +13,19 @@
     "scripts": ["background.js"],
     "persistent": false
   },
+  "content_scripts": [
+    {
+      "matches": ["http://atlas.infegy.com/*", "https://atlas.infegy.com/*"],
+      "css": ["/libs/"],
+      "js": ["libs/jquery-2.1.3.min.js", "infegytagger.js"],
+      "run_at": "document_end"
+    }
+  ],
   "permissions": [
     "declarativeContent",
     "activeTab",
+    "https://atlas.infegy.com/",
+    "http://atlas.infegy.com/",
     "https://ajax.googleapis.com/"
   ]
 }
