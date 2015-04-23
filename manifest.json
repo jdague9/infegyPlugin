@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+
+  "name": "Infegy Atlas Tagging Extension",
+  "description": "This extension adds tagging functionality to the Infegy Atlas UI",
+  "version": "1.0",
+
+  "page_action": {
+    "default_icon": "lightbulb.png",
+    "default_title": "Infegy Atlas Tagger"
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "permissions": [
+    "declarativeContent",
+    "activeTab",
+    "https://ajax.googleapis.com/"
+  ]
+}
